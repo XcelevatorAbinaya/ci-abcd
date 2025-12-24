@@ -1,0 +1,24 @@
+name: Use Secrets
+
+on: [push]
+ 
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Use secret
+
+        run: |
+
+          echo "Username is ${{ secrets.SECRETFILE }}"
+
+          echo "Password length is ${#SECRETFILE}"
+
+        env:
+
+          SECRETFILE: ${{ secrets.SECRETFILE }}
+ 
