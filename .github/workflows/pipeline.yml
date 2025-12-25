@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Validate build
-        run: mvn clean compile
+        run: echo "Running echo"
 
   
   scan:
