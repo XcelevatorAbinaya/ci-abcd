@@ -1,1 +1,13 @@
+name: Parent CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  call-child:
+    uses: ./.github/workflows/child.yml
+    with:
+      java-version: "17"
 
